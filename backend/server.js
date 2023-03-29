@@ -13,15 +13,13 @@ process.on('uncaughtException',(err)=>{
 dotenv.config({path:'backend/config/config.env'})
 
 // database connection calling
-dbconnect();
+dbconnect();  
 //uncaught error example
 // console.log(cricket);
-const server = app.listen(process.env.PORT,()=>{
-
+const port = parseInt(process.env.PORT)
+const server = app.listen(port,()=>{ 
     console.log(`Server is working on http://localhost:${process.env.PORT}`)
 })
-
-
 // haldligh promise rejecttion
 process.on('unhandledRejection',(err)=>{
     console.log(`Error ; ${err.message}`);
