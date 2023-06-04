@@ -1,5 +1,5 @@
-const app = require('./app');
-const dotenv = require('dotenv');
+const app = require('./app')
+const cloudinary = require('cloudinary')
 const dbconnect=require('./config/dbConnection')
 
 
@@ -10,10 +10,21 @@ process.on('uncaughtException',(err)=>{
     process.exit(1);
 })
 //link to config folder
-dotenv.config({path:'backend/config/config.env'})
+if(process.env.NODE_ENV!=="PRODUCTION"){
+    require('dotenv').config({path:'backend/config/config.env'})
+}
+
 
 // database connection calling
 dbconnect();  
+
+// cloudinary
+cloudinary.config({
+    cloud_name:process.env.CLOUDINARY_NAME,
+    api_key:process.env.CLOUDINARY_API_KEY,
+    api_secret:process.env.CLOUDINARY_API_SECRET
+})
+
 //uncaught error example
 // console.log(cricket);
 const port = parseInt(process.env.PORT)

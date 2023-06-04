@@ -5,7 +5,6 @@ class ApiFeaturs {
         this.query=query;
         this.queryStr=queryStr;
     }
-
     search(){
         const keyword  = this.queryStr.keyword 
         ? {
@@ -26,13 +25,19 @@ class ApiFeaturs {
         // console.log(queryCopy)
         removeFileds.forEach((key)=> delete queryCopy[key]);
         // console.log(queryCopy)
+
+        // // filter for price and rating 
+        // let queryStr = JSON.stringify(queryCopy);
+        // queryStr = queryStr.replace(/\b(gt|gte|lt|lte)\b/g, (key) => `$${key}`);
         
-        // filter for price and rating 
+        // this.query = this.query.find(JSON.parse(queryStr));
+        // // console.log(queryCopy)
+        // return this;
         let queryStr = JSON.stringify(queryCopy);
         queryStr = queryStr.replace(/\b(gt|gte|lt|lte)\b/g, (key) => `$${key}`);
-        
+
         this.query = this.query.find(JSON.parse(queryStr));
-        // console.log(queryCopy)
+
         return this;
     }
     pagination(resultPerPage){
@@ -42,6 +47,5 @@ class ApiFeaturs {
         this.query = this.query.limit(resultPerPage).skip(skip);
         return this
     }
-
 }
 module.exports = ApiFeaturs;

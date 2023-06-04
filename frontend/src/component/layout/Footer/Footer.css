@@ -1,0 +1,28 @@
+footer{
+    margin-top: 1vmax;
+    padding: 1vmax;
+    background-color: black;
+    display: flex;
+    bottom: 0;
+    height: auto;
+    width: 97.5%;
+    align-items: center;
+}
+.upperfooter{
+    width: 100%;
+    text-align: center;
+}
+.upperfooter > h1 {
+    font-size: 3vmax;
+    color: rgb(156, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.upperfooter > p{
+    color: aliceblue;
+    max-width: 40%;
+    margin: 1vmax auto;
+    padding: 10px;
+}
+.upperfooter > div >a{
+    padding: 15px;
+}

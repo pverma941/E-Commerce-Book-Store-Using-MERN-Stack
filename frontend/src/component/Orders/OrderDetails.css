@@ -1,0 +1,63 @@
+.OrderDetailsPage{
+    background-color: white;
+}
+.OrderDetailsContainer>h1{
+    font: 300 3vmax "Roboto";
+    margin: 1vmax 0;
+    color: tomato;
+}
+.OrderDetailsContainer{
+    padding: 5vmax;
+    padding-bottom: 0%;
+}
+.OrderDetailsContainer>p{
+    font: 400 3vmax "Roboto";
+
+}
+.OrderDetailsContainerBox,
+.OrderDetailCartItems{
+    margin: 2vmax;
+}
+.OrderDetailsContainerBox>div{
+    display: flex;
+    margin: 1vmax 0;
+}
+.OrderDetailsContainerBox>div>p{
+    font: 400 1vmax "Roboto";
+    color: black;
+
+}
+.OrderDetailsContainerBox>div>span{
+    margin: 0 1vmax;
+    font: 100 1vmax "Roboto";
+    color: rgb(73, 72, 72);
+}
+.OrderDetailCartItems>p{
+    font: 400 1.8vmax "Roboto";
+}
+.OrderDetailCartItems{
+    padding: 2vmax 5vmax;
+    border-top: 1px solid black;
+}
+.OrderDetailCartItems>div{
+    display: flex;
+    font: 100 1vmax "Roboto";
+    align-items: center;
+    margin: 2vma 0;
+
+}
+.OrderDetailCartItems>div>img{
+    width: 3vmax;
+}
+
+.OrderDetailCartItems>div>a{
+    color: gray;
+    margin: 0 2vmax;
+    width: 60%;
+    text-decoration: none;
+}
+.OrderDetailCartItems>div>span{
+    font: 100 1vmax "Roboto";
+    color: gray;
+}
+

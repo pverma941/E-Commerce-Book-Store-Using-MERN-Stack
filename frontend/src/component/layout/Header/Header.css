@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar{
+  width: 100%;
+  height: 60px;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+li{
+  list-style: none;
+  font-size: 0.8rem;
+
+}
+
+a{
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+}
+header{
+  position: relative;
+  padding: 0 0;
+  background-color: #32aedf;
+
+}
+
+.navbar .logo a{
+  font-size: 1.5rem;
+  padding-left: 20px;
+  font-weight: bold;
+}
+.navbar .link{
+  display: flex;
+  gap: 2rem;
+}
+
+ .navbar .toggle-btn{ 
+  color: white;
+  cursor: pointer;
+  display: none;
+} 
+.dropDownMenu{
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 70px;
+  width: 90%;
+  /* height: 0; */
+  background: rgba(117, 188, 235, 0.493);
+  backdrop-filter: blur(15px);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+/* .dropDownMenu.open{
+  height: 240px;
+} */
+.dropDownMenu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width:1000px) {
+  .navbar .link,
+  .navbar .actionBtn{
+    display: none;
+  }
+  .navbar .toggle-btn{
+    display: block;
+  }
+  .dropDownMenu{
+    display: block;
+  }
+}

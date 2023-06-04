@@ -1,0 +1,109 @@
+.banner{
+    background-image: url(../../assets/Images/book.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 84vmin;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    color: beige;
+}
+.banner > h1{
+    margin: 5vmax;
+    
+    font: 600 2.5vmax "Roboto";
+}
+.banner > p {
+    font: 300 1.6vmax "Lucida Sans";
+}
+.banner > a > button {
+    margin-bottom: 5vmax;
+    cursor: pointer;
+    background-color: aliceblue;
+    border: 1px solid white;
+    border-radius: 0;
+    padding: 1vmax;
+    transition: all 0.5s;
+    width: 9vmax ;
+    font: 500 1vmax "Roboto";
+}
+.banner > a > button:hover{
+    background-color: #2d97e2;
+    color: antiquewhite;
+}
+.banner::after{
+    content: "";
+    width: 100vw;
+    height: 100vmin;
+    background-color: white;
+    position: absolute;
+    top: 0%;
+    clip-path: polygon(0 100%, 0 100%, 100% 100%);
+    left: 0;
+    max-width: 100%;
+}
+.heading{
+    text-align: center;
+    font-family: Roboto;
+    font-size: 1.4vmax;
+    border-bottom: 1px solid black;
+    width: 20vmax;
+    padding: 2vmax;
+    margin: 1vmax auto;
+    color: rgb(51, 51, 51);
+}
+
+
+/* product file css */
+.container{
+    display: flex;
+    margin: 2vmax auto;
+    width: 80vw;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 100%;
+
+}
+.productCart{
+    width: 14vmax;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: rgb(51, 51, 51);
+    margin: 2vmax;
+    transition: all 0.5s;
+    padding-bottom: 0.5vmax;
+}
+.productCart > img {
+    width: 14vmax;
+}
+.productCart > div {
+    margin: 0.5vmax;
+    display: flex ;
+    justify-content: flex-start;
+    align-items: center;
+}
+.productCartSpan{
+    margin: 0.5vmax;
+    font : 300 0.8vmax "Roboto";
+
+}
+.productCart>p{
+    font-family: "Roboto";
+    font-size: 1.2vmax;
+    margin: 1vmax 0.5vmax;
+    margin-bottom: 0;
+
+}
+.productCart >span{
+    margin: 0.5vmax;
+    color: green;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.5vmax;
+}
+.productCart:hover{
+    box-shadow:0 0 5px rgba(15,15,15,0.26);
+    transform: scale(1.05);
+}

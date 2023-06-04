@@ -1,0 +1,104 @@
+.shipingContainer{
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+    max-width: 100vw;
+
+}
+.shipingBox{
+    background-color: white;
+    width: 25vw;
+    height: 90vh;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.shipingHeading{
+    text-align: center;
+    color: black;
+    font: 400 1.3vmax "Roboto";
+    padding: 1.3vmax;
+    border-bottom: 1px solid rgb(37, 37, 37);
+    width: 50%;
+    margin: auto;
+}
+.shipingForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2vmax;
+    justify-content: center;
+    height: 80%;
+    transition: all 0.5s;
+}
+.shipingForm>div{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin: 0.5vmax;
+}
+.shipingForm>div>select,
+.shipingForm>div>input{
+    padding: 1vmax 4vmax;
+    padding-right: 1vmax;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline: none;
+}
+.shipingForm>div>svg{
+    position: absolute;
+    transform: translateX(1vmax);
+    font-size: 1.6vmax;
+    color:black;
+
+}
+.ShipingBtn{
+    border: none;
+    background-color: tomato;
+    color: white;
+    font: 300 1vmax "Roboto";
+    width: 100%;
+    padding: 1vmax;
+    cursor: pointer;
+    transition: all 0.5s;
+    outline: none;
+    margin: 2vmax;
+}
+.ShipingBtn:hover{
+    background-color: rgb(235, 54, 22);
+}
+@media screen and (max-width: 1000px) {
+    .shipingBox {
+      width: 100vw;
+      height: 95vh;
+    }
+  
+    .shipingHeading {
+      font: 400 6vw "Roboto";
+      padding: 5vw;
+    }
+  
+    .shipingForm {
+      padding: 11vw;
+    }
+  
+    .shipingForm > div > input,
+    .shipingForm > div > select {
+      padding: 5vw 10vw;
+      font: 300 4vw cursive;
+    }
+  
+    .shippingForm > div > svg {
+      font-size: 6vw;
+      transform: translateX(3vw);
+    }
+  
+    .ShipingBtn {
+      font: 300 4vw "Roboto";
+      padding: 4vw;
+    }
+  }
